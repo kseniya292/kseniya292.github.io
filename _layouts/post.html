@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <div class="container">
+ 	  <div class="post-content row" itemprop="articleBody">
+ 	  	 <div class="col-lg-10 col-lg-offset-1">
+			  <header class="post-header">
+			    <h1 class="project-title" itemprop="name headline">{{ page.title }}</h1>
+			    <a href="{{page.websiteURL}}" target="_blank"><p class="view-site-link">View Site<i class="fa fa-long-arrow-right" aria-hidden="true"></i></p></a>
+
+
+			  </header>
+			  			  	<img src="{{ page.image-path }}" alt="{{ page.title }}"/>
+		</div> <!--col-->
+	  </div> <!--row-->
+  </div><!--container-->
+	  		
+  <div class="container project-container">
+ 	  <div class="row">
+ 	  	 <div class="col-lg-8 col-lg-offset-2">
+		    {{ content }}
+		    <p>Skills: {{ page.skills }}</p>
+		    <!-- <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> -->
+		</div> <!--col-->
+	  </div> <!--row-->
+  </div><!--container-->
+
+</article>

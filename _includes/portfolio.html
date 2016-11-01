@@ -1,0 +1,23 @@
+ <!--Portfolio Section -->
+    <section class="success" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Portfolio</h2>
+                </div>
+            </div>
+                <div class="row">
+                  {% for item in site.projects reversed | sort: 'date' %}
+                        <a href="{{ item.url }}"><div class="col-xs-12 col-sm-6 project">
+
+                          <div class="project-box">
+                            <h3>{{ item.title }} <i class="fa fa-long-arrow-right" aria-hidden="true"></i></h3>
+                            <img src="{{ item.thumbnail-path }}" alt="{{ item.title }}"/>
+                          </div>
+
+                        </div></a>
+                  {% endfor %}
+
+                </div> <!--row-->
+        </div>
+    </section>

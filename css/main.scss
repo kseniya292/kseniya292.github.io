@@ -1,0 +1,343 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: 'Poppins', sans-serif;
+$base-font-size:   14px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.8;
+$header-font-family: 'Muli', sans-serif;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+$mauve-color: 		#e5ecf0;
+$red-color:			#FA3C33;
+$lighter-red-color: #c83028;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting";
+
+
+/*---------------------my styles----------------------------*/
+/*--Nav Styles--*/
+
+.navbar-brand {
+	position: relative;
+}
+
+.navbar-default .navbar-toggle {
+	color: $red-color;
+	border: none;
+}
+
+.navbar-brand img {
+	position: absolute;
+	width: 85%;
+	top: 7px;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: $red-color;
+}
+/*--showcase image styles--*/
+.showcase {
+	position: relative;
+	margin-top: 50px;
+}
+
+.showcase img{
+	width: 100%;
+}
+
+.text-overlay {
+	position: absolute;
+	text-align: center;
+		p {
+			line-height: 1;
+		}
+		button {
+			text-transform: uppercase;
+			background-color: $red-color;
+			border: none;
+			padding: 10px;
+			color: white;
+		}
+		button:hover {
+			background-color: $lighter-red-color;
+		}
+		a {
+			color: white;
+		}
+		hr {
+			border-bottom: 2px solid $red-color;
+			width: 90%;
+			margin: 0 auto;
+		}
+		h1 {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		h2 {
+
+		}
+
+}
+
+h1 {
+	font-family: $header-font-family;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: black;
+}
+
+h2 {
+	font-size: 18px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.accentColor {
+	color: $red-color;
+}
+
+.whiteColor {
+	color: white;
+}
+
+/*--portfolio section--*/
+
+.project {
+	padding: 10px;
+}
+
+.project-box {
+	position: relative;
+	color: black;
+	background-color: $red-color;
+	z-index: 1000;
+	h3 {
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		display: none;
+		color: white;
+		font-size: 30px;
+	}
+}
+
+.project img {
+	width: 100%;
+}
+
+#about, #portfolio, #contact {
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.social-icons {
+	padding-top: 3%;
+}
+
+.social-icon {
+	padding-right: 3%;
+	padding-left: 3%;
+	color: #FA3C33;
+	font-size: 24px;
+}
+.social-icons {
+	text-align: center;
+}
+
+.social-icon:hover {
+	color: $lighter-red-color;
+}
+
+.btn-success.focus, .btn-success:focus {
+	background-color: $red-color;
+}
+
+.btn-success.focus, .btn-success, .btn:hover, .btn-active, .btn-success:hover, .btn-success:visited, .btn-success:link {
+    background-color: $lighter-red-color;
+}
+
+#portfolio {
+	background-color: $mauve-color;
+	// color: white;
+}
+
+.site-footer {
+	background-color: $red-color;
+}
+
+#about {
+	text-align: center;
+}
+
+.form-control {
+	border: 2px solid #FA3C33;
+	border-radius: 0;
+}
+
+.btn-success {
+	background-color: #FA3C33;
+	border: none;
+	border-radius: 0;
+}
+
+/*------individual project page--------*/
+.post {
+	text-align: center;
+}
+.post-header {
+	margin-top: 50px;
+	margin-bottom: 0%;
+	h1 {
+		text-align: center;
+		padding-top: 5%;
+		padding-left: 0%;
+		padding-right: 0%;
+		font-weight: normal;
+		margin-bottom: 1%;
+	}
+}
+
+.post-content img {
+	width: 70%;
+	margin-bottom: 2%;
+}
+
+.fa-long-arrow-right {
+	padding-left: 5px;
+}
+
+a, a:visited, a:link, a:active {
+	color: $red-color;
+	text-decoration: none;
+	// font-weight: bold;
+}
+
+a:hover {
+	text-decoration: none;
+	color: $lighter-red-color;
+}
+
+a.contact-button {
+	color: white;
+}
+
+.view-site-link {
+	font-size: 20px;
+}
+
+.project-container {
+	padding-bottom: 5%;
+}
+
+footer {
+	text-align: center;
+	color: white;
+}
+
+footer img {
+	width: 10%;
+	padding-bottom: 10%;
+}
+
+footer p, .contact-list a, .contact-list {
+color: white;
+}
+
+.icon-footer {
+	color: white;
+}
+
+.social-icons-footer {
+	text-align: center;
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+
+h6 {
+	padding-top: 4%;
+}
+
+/*-----------------------------------------END MOBILE-------------------------------*/
+@media all and (min-width: 800px) {
+	.site-header img{
+		width: 40%;
+		padding: 10px;
+	}
+
+	h1 {
+	font-size: 50px;	
+	}
+
+	h2 {
+	font-size: 30px;
+	padding-bottom: 20px;
+	}
+	.text-overlay p {
+	font-size: 20px;
+	}
+
+	p {
+		line-height: 30px;
+		font-size: 16px;
+	}
+
+
+/*------individual project page--------*/
+	.post-header {
+		margin-top: 50px;
+		h1 {
+			padding-top: 5%;
+			font-weight: normal;
+			font-size: 44px;
+		}
+	}
+
+	.project-box {
+		h3 {
+			font-size: 30px;
+		}
+	}
+
+}
