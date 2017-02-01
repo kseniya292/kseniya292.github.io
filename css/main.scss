@@ -55,6 +55,14 @@ $on-laptop:        800px;
 
 
 /*---------------------my styles----------------------------*/
+.container-fluid {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
 /*--Nav Styles--*/
 
 .navbar-brand {
@@ -70,6 +78,10 @@ $on-laptop:        800px;
 	position: absolute;
 	width: 85%;
 	top: 7px;
+}
+
+.navbar-default {
+    background-color: #f2f5f7;
 }
 
 .navbar-default .navbar-nav>li>a:hover {

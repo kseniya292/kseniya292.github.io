@@ -449,6 +449,14 @@ pre {
     color: #099; }
 
 /*---------------------my styles----------------------------*/
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px; }
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px; }
+
 /*--Nav Styles--*/
 .navbar-brand {
   position: relative; }
@@ -461,6 +469,9 @@ pre {
   position: absolute;
   width: 85%;
   top: 7px; }
+
+.navbar-default {
+  background-color: #f2f5f7; }
 
 .navbar-default .navbar-nav > li > a:hover {
   color: #FA3C33; }
